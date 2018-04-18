@@ -1,6 +1,6 @@
-#go-collections
+# go-collections
 
-[x] defaultdict
-[x] OrderedDict
-[ ] Counter
-[ ] deque
+- [x] defaultdict
+- [x] OrderedDict
+- [ ] Counter
+- [ ] deque
