@@ -29,6 +29,14 @@ func (o *ordereddict) get_ordering() []interface{} {
     return o.ordering
 }
 
+func (o *ordereddict) return_in_order() []interface{} {
+    res := make([]interface{}, len(o.ordering))
+    for index, key := range o.ordering {
+        res[index] = o.items[key]
+    }
+    return res
+}
+
 func main() {
     o := create()
     o.add('a', 1)
@@ -37,4 +45,6 @@ func main() {
     fmt.Println(o.get_ordering()[0])
     fmt.Println(o.get(o.get_ordering()[0]))
     fmt.Println(o.get(o.get_ordering()[2]))
+
+    fmt.Println(o.return_in_order())
 }
